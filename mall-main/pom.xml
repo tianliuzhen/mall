@@ -43,13 +43,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <!--   idea打jar包，提示 jar包中没有主清单属性
+                        <goal>repackage</goal>是解决这个问题的，
+                        但是新的springBoot版本好像这个不加也没事 -->
+                <!--  <executions>
+                      <execution>
+                          <goals>
+                              <goal>repackage</goal>
+                          </goals>
+                      </execution>
+                  </executions>-->
             </plugin>
         </plugins>
     </build>
